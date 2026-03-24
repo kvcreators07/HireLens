@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1>Resume Analysis 📊</h1>
+<p>Your resume has been analyzed successfully 🚀</p>
+
+<!-- 🎯 ATS SCORE -->
+<div class="card">
+    <h2>ATS Score</h2>
+    <div class="score">{{ score }}/100</div>
+</div>
+
+<!-- 🧠 SKILLS -->
+<div class="card">
+    <h2>Skills Extracted</h2>
+
+    {% for skill in skills %}
+        <span class="badge">{{ skill }}</span>
+    {% endfor %}
+</div>
+
+<!-- 📝 SUGGESTIONS -->
+<div class="card">
+    <h2>Suggestions</h2>
+
+    <ul>
+    {% for tip in suggestions %}
+        <li>{{ tip }}</li>
+    {% endfor %}
+    </ul>
+</div>
+
+<!-- 💼 JOBS -->
+<div class="card">
+    <h2>Recommended Jobs</h2>
+
+    {% for job in jobs %}
+        <div class="job-card">{{ job }}</div>
+    {% endfor %}
+</div>
+
+{% endblock %}

@@ -1,0 +1,352 @@
+/* 🌌 Background */
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e1b4b, #0ea5e9);
+  color: white;
+}
+
+/* 🔝 Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+}
+
+.navbar a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+/* 📦 Container */
+.container {
+  padding: 50px;
+  text-align: center;
+}
+
+/* 💎 Glass Card */
+.card {
+  background: rgba(255,255,255,0.08);
+  padding: 25px;
+  border-radius: 20px;
+  backdrop-filter: blur(15px);
+  margin: 20px auto;
+  width: 60%;
+}
+
+/* 🔘 Button */
+.btn {
+  background: linear-gradient(45deg, #7c3aed, #06b6d4);
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+/* ✨ Fade Animation */
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+/* 🔥 HERO SECTION */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.hero-text {
+  width: 50%;
+}
+
+.hero-graphic {
+  position: relative;
+  width: 40%;
+  height: 300px;
+}
+
+/* ✨ Animated circles */
+.circle {
+  width: 200px;
+  height: 200px;
+  background: #7c3aed;
+  border-radius: 50%;
+  position: absolute;
+  animation: float 5s infinite alternate;
+  filter: blur(50px);
+}
+
+.circle.small {
+  width: 120px;
+  height: 120px;
+  background: #06b6d4;
+  top: 100px;
+  left: 100px;
+}
+
+/* 🎬 Animation */
+@keyframes float {
+  from { transform: translateY(0); }
+  to { transform: translateY(50px); }
+}
+
+/* ⭐ FEATURES */
+.features {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+.feature-box {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 15px;
+  width: 25%;
+  transition: 0.3s;
+}
+
+.feature-box:hover {
+  transform: translateY(-10px);
+}
+
+input {
+  width: 60%;
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+}
+
+input[type="file"] {
+  background: rgba(255,255,255,0.1);
+  padding: 10px;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+/* 🎯 Score */
+.score {
+  font-size: 50px;
+  font-weight: bold;
+  color: #06b6d4;
+}
+
+/* 🧠 Skills */
+.badge {
+  background: #7c3aed;
+  padding: 8px 15px;
+  border-radius: 20px;
+  margin: 5px;
+  display: inline-block;
+}
+
+/* 💼 Jobs */
+.job-card {
+  background: rgba(255,255,255,0.1);
+  padding: 15px;
+  border-radius: 15px;
+  margin: 10px;
+  transition: 0.3s;
+}
+
+.job-card:hover {
+  transform: scale(1.05);
+}
+
+/* 📝 Suggestions */
+ul {
+  text-align: left;
+}
+
+/* 🌟 Headings */
+h1, h2 {
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+/* 📦 Cards spacing */
+.card {
+  margin-bottom: 30px;
+}
+
+/* 🔘 Button upgrade */
+.btn {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.btn:hover {
+  box-shadow: 0 0 25px #7c3aed;
+}
+
+/* ✨ Input focus glow */
+input:focus {
+  box-shadow: 0 0 10px #06b6d4;
+}
+
+/* 🎯 Score glow */
+.score {
+  text-shadow: 0 0 20px #06b6d4;
+}
+
+/* 🧠 Skill badges glow */
+.badge {
+  box-shadow: 0 0 10px #7c3aed;
+}
+
+/* 💼 Job cards hover glow */
+.job-card:hover {
+  box-shadow: 0 0 20px #06b6d4;
+}
+
+/* 🌌 Smooth fade for all */
+.card, .hero, .feature-box {
+  animation: fadeIn 1s ease-in;
+}
+
+/* 📱 Responsive (IMPORTANT) */
+@media (max-width: 768px) {
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text, .hero-graphic {
+    width: 100%;
+  }
+
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-box {
+    width: 80%;
+    margin-bottom: 15px;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
+/* 🔝 Navbar hover effect */
+.navbar a {
+  position: relative;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background: #06b6d4;
+  bottom: -3px;
+  left: 0;
+  transition: 0.3s;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+p {
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+/* 🎬 Smooth page load */
+body {
+  animation: fadePage 1s ease-in;
+}
+
+@keyframes fadePage {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* 📦 Card pop animation */
+.card {
+  animation: popUp 0.8s ease;
+}
+
+@keyframes popUp {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* 🎯 Score pulse */
+.score {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+/* 🧠 Skill badges bounce */
+.badge {
+  animation: bounce 1s ease;
+}
+
+@keyframes bounce {
+  0% { transform: translateY(20px); opacity: 0; }
+  100% { transform: translateY(0); opacity: 1; }
+}
+
+/* 💼 Job cards slide */
+.job-card {
+  animation: slideIn 0.8s ease;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* 🔘 Button click effect */
+.btn:active {
+  transform: scale(0.95);
+}
+
+/* 🔝 Navbar smooth */
+.navbar {
+  animation: slideDown 0.6s ease;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
