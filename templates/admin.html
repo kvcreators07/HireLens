@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<h1 style="text-align:center;">📊 User Data Table</h1>
+
+<div class="card">
+<table style="width:100%; border-collapse: collapse; color:white;">
+    <tr style="background:#7c3aed;">
+        <th>ID</th>
+        <th>Username</th>
+        <th>Resume</th>
+        <th>Score</th>
+        <th>Skills</th>
+        <th>Jobs</th>
+    </tr>
+
+    {% for row in data %}
+    <tr style="text-align:center;">
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[2] }}</td>
+        <td>{{ row[3] }}</td>
+        <td>{{ row[4] }}</td>
+        <td>{{ row[5] }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</div>
+
+{% endblock %}
