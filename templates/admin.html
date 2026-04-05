@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+
+<h2>Admin Panel</h2>
+
+<table>
+<tr>
+<th>User</th>
+<th>Resume</th>
+<th>Score</th>
+<th>Skills</th>
+</tr>
+
+{% for row in data %}
+<tr>
+<td>{{row[1]}}</td>
+<td>{{row[2]}}</td>
+<td>{{row[3]}}</td>
+<td>{{row[4]}}</td>
+</tr>
+{% endfor %}
+
+</table>
+
+{% endblock %}
