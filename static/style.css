@@ -1,0 +1,37 @@
+body {
+    margin:0;
+    font-family: 'Segoe UI';
+    background: linear-gradient(135deg,#0f172a,#020617);
+    color:white;
+}
+
+nav {
+    display:flex;
+    justify-content:space-between;
+    padding:20px;
+    background:rgba(255,255,255,0.05);
+}
+
+nav a {color:white;margin:10px;}
+
+.hero {
+    text-align:center;
+    padding:80px;
+}
+
+.card {
+    background:rgba(255,255,255,0.05);
+    padding:30px;
+    border-radius:15px;
+    width:400px;
+    margin:auto;
+}
+
+button {
+    padding:10px;
+    background:#6366f1;
+    border:none;
+    color:white;
+}
+
+input {width:90%;padding:10px;margin:10px;}

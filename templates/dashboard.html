@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+
+<div class="hero">
+<h2>Welcome {{session.user}}</h2>
+</div>
+
+<div class="card">
+<form action="/analyze" method="POST" enctype="multipart/form-data">
+<input type="file" name="resume" required>
+<button>Analyze</button>
+</form>
+</div>
+
+{% endblock %}
